@@ -3,10 +3,12 @@ import {Tilt} from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github,live } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import Modal from "./Modal";
+import { createPortal } from 'react-dom';
 
 
 
@@ -18,9 +20,16 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_link,
+  technologiesUsed
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+   
+       {createPortal(
+        <Modal id={index} image={image} title={name} content={"test"} techs={technologiesUsed} source_code_link={source_code_link} live_link={live_link} />,
+       document.body
+      )}
       <Tilt
         options={{
           max: 45,
@@ -37,9 +46,22 @@ const ProjectCard = ({
           />
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+            {/* Live Link */}
+            <div
+              onClick={() => window.open(live_link, "_blank")}
+              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+            >
+              <img
+                src={live}
+                alt='source code'
+                className='w-1/2 h-1/2 object-contain'
+              />
+            </div>
+
+           {/* Github link */}
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='black-gradient ml-[5px] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
                 src={github}
@@ -47,6 +69,9 @@ const ProjectCard = ({
                 className='w-1/2 h-1/2 object-contain'
               />
             </div>
+
+
+
           </div>
         </div>
 
@@ -65,6 +90,7 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
+       
       </Tilt>
     </motion.div>
   );
@@ -81,11 +107,15 @@ const ProjectCard = ({
 
 
 const Works = () => {
+
+
+
+
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -101,11 +131,16 @@ const Works = () => {
 
       <div className='mt-20 flex flex-wrap gap-7'>
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+         <button type="button"   data-hs-overlay={`#hs-slide-down-animation-modal-${index}`}>
+           <ProjectCard key={`project-${index}`} index={index} {...project} />
+         </button>
         ))}
       </div>
+
+    
+   
     </>
   );
 }
 
-export default SectionWrapper(Works , "")
+export default SectionWrapper(Works , "work")

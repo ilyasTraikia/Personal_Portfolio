@@ -52,7 +52,7 @@ const About = () => {
     <>
       <motion.div variants= {textVariant()}>
        <p className={styles.sectionSubText}>Introduction</p>
-       <h2 className={styles.sectionHeadText}>Overview.</h2>
+       <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
 
       <motion.p
@@ -60,13 +60,13 @@ const About = () => {
        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
        >
           I'am a software developer with experience on Javascript,
-           libraries like React.js , TailWind CSS for Styling , 
+           libraries like React.js , Tailwind CSS for Styling , 
            Node.js and Express.js , as well as C# and dot net core,
            and i believe that with patience and hard work i can achieve 
            your desires considering developement and problem solving. 
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex justify-center flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

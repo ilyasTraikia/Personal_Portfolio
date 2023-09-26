@@ -40,21 +40,21 @@ export const navLinks = [{
 ];
 
 const services = [{
-        title: "Web Developer",
+        title: "Frontend Developer",
         icon: web,
     },
     {
-        title: "React Native Developer",
+        title: "Backend Developer",
         icon: mobile,
     },
     {
-        title: "Backend Developer",
+        title: "Mobile Developer",
         icon: backend,
-    },
-    {
-        title: "Content Creator",
-        icon: creator,
-    },
+    }
+    // {
+    //     title: "Content Creator",
+    //     icon: creator,
+    // },
 ];
 
 const technologies = [{
@@ -77,10 +77,10 @@ const technologies = [{
         name: "React JS",
         icon: reactjs,
     },
-    {
-        name: "Redux Toolkit",
-        icon: redux,
-    },
+    // {
+    //     name: "Redux Toolkit",
+    //     icon: redux,
+    // },
     {
         name: "Tailwind CSS",
         icon: tailwind,
@@ -188,15 +188,41 @@ const testimonials = [{
     },
 ];
 
-const projects = [{
-        name: "Car Rent",
-        description: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+const projects = [
+    // {
+    //     name: "Furniture ecommerce",
+    //     description: "Online store that allows users to buy furniture from sofas to chairs to tables with different sizes.",
+    //     tags: [{
+    //             name: "react",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "dot net core",
+    //             color: "green-text-gradient",
+    //         },
+    //         {
+    //             name: "tailwind",
+    //             color: "pink-text-gradient",
+    //         },
+    //     ],
+    //     image: carrent,
+    //     source_code_link: "https://github.com/",
+    //     live_link: "https://github.com/",
+    //     technologiesUsed: [
+    //         "dqs",
+    //         "dqsdq",
+    //         "dqsdqs"
+    //     ]
+    // },
+    {
+        name: "Task management",
+        description: "Simple web application that allows users to manage their tasks by providing different categories and help them be productive.",
         tags: [{
                 name: "react",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "Node.js & Express.js",
                 color: "green-text-gradient",
             },
             {
@@ -204,46 +230,46 @@ const projects = [{
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        image: jobit,
+        source_code_link: "https://github.com/ilyasTraikia/Task-management",
+        live_link: "https://master--ornate-starlight-ad1408.netlify.app/",
+        technologiesUsed: [
+            "Built a REST API for performing all the CRUD operations using Node.js & Express.js and MYSQL",
+            "Used react-router-dom for routing , loading data and handling actions",
+            "Used TailwindCSS library for the styling of the app",
+        ]
     },
     {
-        name: "Job IT",
-        description: "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        name: "Porfolio",
+        description: "A portfolio that provides informations about myself and showcases my skills, tech and projects.",
         tags: [{
                 name: "react",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "three.js",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "tailwind",
                 color: "pink-text-gradient",
             },
-        ],
-        image: jobit,
-        source_code_link: "https://github.com/",
-    },
-    {
-        name: "Trip Guide",
-        description: "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-        tags: [{
-                name: "nextjs",
+            {
+                name: "framer motion",
                 color: "blue-text-gradient",
-            },
-            {
-                name: "supabase",
-                color: "green-text-gradient",
-            },
-            {
-                name: "css",
-                color: "pink-text-gradient",
-            },
+            }
+
         ],
         image: tripguide,
         source_code_link: "https://github.com/",
+        live_link: "",
+        technologiesUsed: [
+            "Built using react and three.js",
+            "Used the packages react-three/fiber,react-three/drei and three.js for creating and handling the 3D models",
+            "Used Framer motion library for the different animations",
+            "Used the tailwindCSS library preline for responsive and ready to use components",
+            "Used the emailJs package to make the contact happen with email"
+        ]
     },
 ];
 
