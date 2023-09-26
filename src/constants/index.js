@@ -23,6 +23,8 @@ import {
     jobit,
     tripguide,
     threejs,
+    taskManagement,
+    portfolioImg
 } from "../assets";
 
 export const navLinks = [{
@@ -230,7 +232,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
+        image: taskManagement,
         source_code_link: "https://github.com/ilyasTraikia/Task-management",
         live_link: "https://master--ornate-starlight-ad1408.netlify.app/",
         technologiesUsed: [
@@ -260,7 +262,7 @@ const projects = [
             }
 
         ],
-        image: tripguide,
+        image: portfolioImg,
         source_code_link: "https://github.com/",
         live_link: "",
         technologiesUsed: [

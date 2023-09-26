@@ -31,9 +31,15 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 import live from './live.png'
+import taskManagement from './taskManagement.png'
+import portfolioImg from './portfolioImg.png'
+
+import logo2 from './logo2.png'
 
 export {
+    portfolioImg,
     logo,
+    logo2,
     backend,
     creator,
     mobile,
@@ -61,5 +67,6 @@ export {
     carrent,
     jobit,
     tripguide,
-    live
+    live,
+    taskManagement
 };
