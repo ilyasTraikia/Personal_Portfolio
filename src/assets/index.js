@@ -1,4 +1,3 @@
-import logo from "./logo-color.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -38,7 +37,6 @@ import logo2 from './logo2.png'
 
 export {
     portfolioImg,
-    logo,
     logo2,
     backend,
     creator,
