@@ -263,8 +263,8 @@ const projects = [
 
         ],
         image: portfolioImg,
-        source_code_link: "https://github.com/",
-        live_link: "",
+        source_code_link: "https://github.com/ilyasTraikia/Personal_Portfolio",
+        live_link: "https://personal-portfolio-henna-rho.vercel.app",
         technologiesUsed: [
             "Built using react and three.js",
             "Used the packages react-three/fiber,react-three/drei and three.js for creating and handling the 3D models",
