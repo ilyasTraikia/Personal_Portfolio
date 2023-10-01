@@ -37,7 +37,7 @@ const Ball = (props) => {
   );
 };
 
-const BallCanvas = ({ icon }) => {
+const BallCanvastwo = ({ icon }) => {
   return (
     <Canvas
       frameloop='demand'
@@ -51,6 +51,18 @@ const BallCanvas = ({ icon }) => {
 
       <Preload all />
     </Canvas>
+  );
+};
+
+
+const BallCanvas = ({ icon }) => {
+  return (
+    <div class="flex 
+    h-20 w-20  bg-primary rounded-full">
+    
+       <img className="h-15 w-15" src={icon} alt="tech" />
+  
+</div>
   );
 };
 
